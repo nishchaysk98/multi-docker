@@ -20,7 +20,8 @@ after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 
   #Push the images to AWS
-
+  #retrying to push
+  
   - docker push multi-client
   - docker push multi-nginx
   - docker push multi-server

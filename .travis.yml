@@ -21,8 +21,5 @@ after_success:
 
   #Push the images to AWS
   #retrying to push
-  
+
   - docker push multi-client
-  - docker push multi-nginx
-  - docker push multi-server
-  - docker push multi-worker

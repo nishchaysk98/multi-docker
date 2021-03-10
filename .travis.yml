@@ -23,3 +23,6 @@ after_success:
   #retrying to push
 
   - docker push multi-client
+  - docker push multi-nginx
+  - docker push multi-server
+  - docker push multi-worker

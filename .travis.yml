@@ -26,3 +26,15 @@ after_success:
   - docker push dockernishchay/multi-nginx
   - docker push dockernishchay/multi-server
   - docker push dockernishchay/multi-worker
+
+  deploy:
+    provider: elasticbeanstalk
+    region: "us-east-2"
+    app: "simplereactapp"
+    env: "Simplereactapp-env"
+    bucket_name: "elasticbeanstalk-us-east-2-955470624704"
+    bucket_path: "simplereactapp"
+    on:
+      branch: master
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: $AWS_SECRET_KEY
